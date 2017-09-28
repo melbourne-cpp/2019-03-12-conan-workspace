@@ -1,0 +1,18 @@
+[submodule "freetype2"]
+	path = freetype2
+	url = git@github.com:lawrencem99/freetype2.git
+[submodule "tbb"]
+	path = tbb
+	url = git@github.com:lawrencem99/tbb.git
+[submodule "eigen"]
+	path = eigen
+	url = git@github.com:lawrencem99/eigen.git
+[submodule "editor"]
+	path = editor
+	url = git@github.com:lawrencem99/editor.git
+[submodule "lmlib"]
+	path = lmlib
+	url = git@github.com:lawrencem99/lmlib.git
+[submodule "googletest"]
+	path = googletest
+	url = https://github.com/google/googletest.git
