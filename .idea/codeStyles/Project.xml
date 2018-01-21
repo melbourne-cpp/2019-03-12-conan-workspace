@@ -1,13 +1,16 @@
 <component name="ProjectCodeStyleConfiguration">
   <code_scheme name="Project" version="173">
+    <option name="AUTODETECT_INDENTS" value="false" />
     <option name="RIGHT_MARGIN" value="80" />
+    <option name="SOFT_MARGINS" value="80" />
     <Objective-C>
       <option name="INDENT_NAMESPACE_MEMBERS" value="0" />
       <option name="INDENT_C_STRUCT_MEMBERS" value="2" />
       <option name="INDENT_CLASS_MEMBERS" value="2" />
       <option name="INDENT_VISIBILITY_KEYWORDS" value="1" />
       <option name="INDENT_INSIDE_CODE_BLOCK" value="2" />
-      <option name="CLASS_CONSTRUCTOR_INIT_LIST_ALIGN_MULTILINE" value="false" />
+      <option name="FUNCTION_BRACE_PLACEMENT" value="2" />
+      <option name="BLOCK_BRACE_PLACEMENT" value="2" />
       <option name="ALIGN_INIT_LIST_IN_COLUMNS" value="false" />
       <option name="SPACE_BEFORE_POINTER_IN_DECLARATION" value="false" />
       <option name="SPACE_AFTER_POINTER_IN_DECLARATION" value="true" />
@@ -49,6 +52,8 @@
       </indentOptions>
     </codeStyleSettings>
     <codeStyleSettings language="ObjectiveC">
+      <option name="BLANK_LINES_AROUND_CLASS" value="2" />
+      <option name="BLANK_LINES_AROUND_METHOD" value="2" />
       <option name="ALIGN_MULTILINE_ARRAY_INITIALIZER_EXPRESSION" value="false" />
       <option name="METHOD_CALL_CHAIN_WRAP" value="1" />
       <option name="ARRAY_INITIALIZER_LBRACE_ON_NEXT_LINE" value="true" />
