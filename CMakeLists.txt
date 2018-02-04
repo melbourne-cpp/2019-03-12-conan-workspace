@@ -34,6 +34,17 @@ add_subdirectory(googletest)
 
 find_package(Vulkan REQUIRED)
 
+if (UNIX)
+  find_package(PkgConfig REQUIRED)
+
+  PKG_CHECK_MODULES(GTK3 REQUIRED gtk+-3.0)
+endif()
+
+# Setup CMake to use GTK+, tell the compiler where to look for headers
+# and to the linker where to look for libraries
+INCLUDE_DIRECTORIES(${GTK3_INCLUDE_DIRS})
+LINK_DIRECTORIES(${GTK3_LIBRARY_DIRS})
+
 set(EIGEN_DIR ${CMAKE_CURRENT_SOURCE_DIR}/eigen)
 set(EIGEN_INCLUDE_DIR ${EIGEN_DIR})
 
@@ -80,11 +91,15 @@ if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -Wno-error")
 elseif (MSVC)
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /std:c++17")
+elseif(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
 endif ()
 
 if (WIN32)
   add_definitions(-DUNICODE -D_UNICODE -D_AMD64_=100 -D_M_X64=100 -D_WIN64=1
                   -D_WIN32=1)
+elseif(UNIX)
+
 endif ()
 
 add_subdirectory(lmlib)
