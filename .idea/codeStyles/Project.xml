@@ -53,7 +53,9 @@
     <codeStyleSettings language="ObjectiveC">
       <option name="BLANK_LINES_AROUND_CLASS" value="2" />
       <option name="BLANK_LINES_AROUND_METHOD" value="2" />
+      <option name="BRACE_STYLE" value="2" />
       <option name="CLASS_BRACE_STYLE" value="2" />
+      <option name="ELSE_ON_NEW_LINE" value="true" />
       <option name="ALIGN_MULTILINE_ARRAY_INITIALIZER_EXPRESSION" value="false" />
       <option name="METHOD_CALL_CHAIN_WRAP" value="1" />
       <option name="ARRAY_INITIALIZER_LBRACE_ON_NEXT_LINE" value="true" />
