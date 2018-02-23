@@ -6,7 +6,7 @@
       <file path="$PROJECT_DIR$/common/include" />
       <file path="$PROJECT_DIR$/lmlib/include" />
       <file path="$PROJECT_DIR$/lmlib/src" />
-      <file path="$PROJECT_DIR$/lmlib/test" />
+      <file path="$PROJECT_DIR$/lmlib/test/src" />
     </sourceRoots>
   </component>
 </project>
