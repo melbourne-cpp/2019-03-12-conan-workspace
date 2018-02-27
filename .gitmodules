@@ -16,3 +16,6 @@
 [submodule "googletest"]
 	path = googletest
 	url = https://github.com/google/googletest.git
+[submodule "lmengine"]
+	path = lmengine
+	url = git@github.com:lawrencem99/lmengine.git
