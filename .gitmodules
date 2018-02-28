@@ -7,9 +7,9 @@
 [submodule "eigen"]
 	path = eigen
 	url = git@github.com:lawrencem99/eigen.git
-[submodule "editor"]
-	path = editor
-	url = git@github.com:lawrencem99/editor.git
+[submodule "lmeditor"]
+	path = lmeditor
+	url = git@github.com:lawrencem99/lmeditor.git
 [submodule "lmlib"]
 	path = lmlib
 	url = git@github.com:lawrencem99/lmlib.git

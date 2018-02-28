@@ -104,4 +104,4 @@ endif ()
 
 add_subdirectory(lmlib)
 add_subdirectory(lmengine)
-add_subdirectory(editor)
+add_subdirectory(lmeditor)

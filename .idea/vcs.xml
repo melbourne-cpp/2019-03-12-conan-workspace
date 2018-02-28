@@ -7,10 +7,10 @@
   </component>
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/editor" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/eigen" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/freetype2" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/googletest" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lmeditor" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lmengine" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lmlib" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/tbb" vcs="Git" />
