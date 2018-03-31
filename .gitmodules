@@ -19,3 +19,6 @@
 [submodule "lmengine"]
 	path = lmengine
 	url = git@github.com:lawrencem99/lmengine.git
+[submodule "glslang"]
+	path = glslang
+	url = git@github.com:lawrencem99/glslang.git

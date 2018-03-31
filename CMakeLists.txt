@@ -6,6 +6,8 @@ set(CMAKE_MINSIZEREL_POSTFIX "")
 set(CMAKE_STATIC_LIBRARY_PREFIX "")
 set(CMAKE_SHARED_LIBRARY_PREFIX "")
 
+add_subdirectory(glslang)
+
 if (MSVC)
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /MP")
 endif ()
@@ -36,8 +38,6 @@ find_package(Vulkan REQUIRED)
 
 if (UNIX)
   find_package(PkgConfig REQUIRED)
-
-  PKG_CHECK_MODULES(GTK3 REQUIRED gtk+-3.0)
 endif()
 
 # Setup CMake to use GTK+, tell the compiler where to look for headers

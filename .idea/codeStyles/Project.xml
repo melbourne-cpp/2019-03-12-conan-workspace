@@ -10,7 +10,9 @@
       <option name="INDENT_VISIBILITY_KEYWORDS" value="1" />
       <option name="INDENT_INSIDE_CODE_BLOCK" value="2" />
       <option name="KEEP_NESTED_NAMESPACES_IN_ONE_LINE" value="true" />
+      <option name="NAMESPACE_BRACE_PLACEMENT" value="2" />
       <option name="FUNCTION_BRACE_PLACEMENT" value="2" />
+      <option name="BLOCK_BRACE_PLACEMENT" value="2" />
       <option name="ALIGN_INIT_LIST_IN_COLUMNS" value="false" />
       <option name="SPACE_BEFORE_POINTER_IN_DECLARATION" value="false" />
       <option name="SPACE_AFTER_POINTER_IN_DECLARATION" value="true" />
@@ -54,11 +56,11 @@
     <codeStyleSettings language="ObjectiveC">
       <option name="BLANK_LINES_AROUND_CLASS" value="2" />
       <option name="BLANK_LINES_AROUND_METHOD" value="2" />
+      <option name="BRACE_STYLE" value="2" />
       <option name="CLASS_BRACE_STYLE" value="2" />
       <option name="ALIGN_MULTILINE_ARRAY_INITIALIZER_EXPRESSION" value="false" />
       <option name="METHOD_CALL_CHAIN_WRAP" value="1" />
       <option name="PARENTHESES_EXPRESSION_LPAREN_WRAP" value="true" />
-      <option name="BINARY_OPERATION_SIGN_ON_NEXT_LINE" value="true" />
       <option name="ARRAY_INITIALIZER_LBRACE_ON_NEXT_LINE" value="true" />
       <option name="ARRAY_INITIALIZER_RBRACE_ON_NEXT_LINE" value="true" />
       <indentOptions>
