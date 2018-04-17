@@ -22,3 +22,6 @@
 [submodule "glslang"]
 	path = glslang
 	url = git@github.com:lawrencem99/glslang.git
+[submodule "openmesh"]
+	path = openmesh
+	url = git@github.com:lawrencem99/openmesh.git

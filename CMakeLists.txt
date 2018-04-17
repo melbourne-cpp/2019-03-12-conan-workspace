@@ -7,6 +7,9 @@ set(CMAKE_STATIC_LIBRARY_PREFIX "")
 set(CMAKE_SHARED_LIBRARY_PREFIX "")
 
 add_subdirectory(glslang)
+add_subdirectory(openmesh)
+
+set(OPENMESH_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/openmesh/src)
 
 if (MSVC)
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /MP")
