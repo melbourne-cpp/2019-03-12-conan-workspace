@@ -8,6 +8,7 @@ set(CMAKE_SHARED_LIBRARY_PREFIX "")
 
 add_subdirectory(glslang)
 add_subdirectory(openmesh)
+add_subdirectory(embed-resource)
 
 set(OPENMESH_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/openmesh/src)
 

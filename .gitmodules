@@ -25,3 +25,6 @@
 [submodule "openmesh"]
 	path = openmesh
 	url = git@github.com:lawrencem99/openmesh.git
+[submodule "embed-resource"]
+	path = embed-resource
+	url = git@github.com:lawrencem99/embed-resource.git
