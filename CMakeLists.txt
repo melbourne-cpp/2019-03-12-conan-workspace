@@ -10,6 +10,8 @@ add_subdirectory(glslang)
 add_subdirectory(openmesh)
 add_subdirectory(embed-resource)
 
+include_directories(embed-resource)
+
 set(OPENMESH_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/openmesh/src)
 
 if (MSVC)
