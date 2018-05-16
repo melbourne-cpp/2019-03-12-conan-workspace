@@ -1,30 +1,30 @@
 [submodule "freetype2"]
 	path = freetype2
-	url = git@github.com:lawrencem99/freetype2.git
+	url = ../../lawrencem99/freetype2.git
 [submodule "tbb"]
 	path = tbb
-	url = git@github.com:lawrencem99/tbb.git
+	url = ../../lawrencem99/tbb.git
 [submodule "eigen"]
 	path = eigen
-	url = git@github.com:lawrencem99/eigen.git
+	url = ../../lawrencem99/eigen.git
 [submodule "lmeditor"]
 	path = lmeditor
-	url = git@github.com:lawrencem99/lmeditor.git
+	url = ../../lawrencem99/lmeditor.git
 [submodule "lmlib"]
 	path = lmlib
-	url = git@github.com:lawrencem99/lmlib.git
+	url = ../../lawrencem99/lmlib.git
 [submodule "googletest"]
 	path = googletest
 	url = https://github.com/google/googletest.git
 [submodule "lmengine"]
 	path = lmengine
-	url = git@github.com:lawrencem99/lmengine.git
+	url = ../../lawrencem99/lmengine.git
 [submodule "glslang"]
 	path = glslang
-	url = git@github.com:lawrencem99/glslang.git
+	url = ../../lawrencem99/glslang.git
 [submodule "openmesh"]
 	path = openmesh
-	url = git@github.com:lawrencem99/openmesh.git
+	url = ../../lawrencem99/openmesh.git
 [submodule "embed-resource"]
 	path = embed-resource
-	url = git@github.com:lawrencem99/embed-resource.git
+	url = ../../lawrencem99/embed-resource.git
