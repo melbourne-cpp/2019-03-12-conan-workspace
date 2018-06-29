@@ -10,6 +10,7 @@ if (MSVC)
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /MP")
 endif ()
 
+add_subdirectory(fmt)
 add_subdirectory(glslang)
 add_subdirectory(openmesh)
 add_subdirectory(embed-resource)

@@ -28,3 +28,6 @@
 [submodule "embed-resource"]
 	path = embed-resource
 	url = ../../lawrencem99/embed-resource.git
+[submodule "fmt"]
+	path = fmt
+	url = ../../lawrencem99/fmt.git
