@@ -5,6 +5,7 @@
     <sourceRoots>
       <file path="$PROJECT_DIR$/common/include" />
       <file path="$PROJECT_DIR$/eigen/Eigen" />
+      <file path="$PROJECT_DIR$/lmeditor/include" />
       <file path="$PROJECT_DIR$/lmlib/include" />
       <file path="$PROJECT_DIR$/lmlib/src" />
       <file path="$PROJECT_DIR$/lmlib/test/src" />
