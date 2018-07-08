@@ -49,8 +49,18 @@ endif()
 INCLUDE_DIRECTORIES(${GTK3_INCLUDE_DIRS})
 LINK_DIRECTORIES(${GTK3_LIBRARY_DIRS})
 
-set(EIGEN_DIR ${CMAKE_CURRENT_SOURCE_DIR}/eigen)
-set(EIGEN_INCLUDE_DIR ${EIGEN_DIR})
+include(ExternalProject)
+ExternalProject_Add(
+  eigen
+  PREFIX eigen
+  URL https://github.com/eigenteam/eigen-git-mirror/archive/3.3.4.tar.gz
+  URL_MD5 1896a1f682e6cdcffd91b6e5ba8286a2
+  CONFIGURE_COMMAND ""
+  BUILD_COMMAND ""
+  INSTALL_COMMAND ""
+)
+ExternalProject_Get_Property(eigen SOURCE_DIR)
+set(EIGEN_SOURCE_DIR ${SOURCE_DIR})
 
 set(FREETYPE_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/freetype2/include)
 

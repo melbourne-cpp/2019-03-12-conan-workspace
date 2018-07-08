@@ -1,9 +1,6 @@
 [submodule "tbb"]
 	path = tbb
 	url = ../../lawrencem99/tbb.git
-[submodule "eigen"]
-	path = eigen
-	url = ../../lawrencem99/eigen.git
 [submodule "lmeditor"]
 	path = lmeditor
 	url = ../../lawrencem99/lmeditor.git

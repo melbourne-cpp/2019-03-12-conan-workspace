@@ -7,7 +7,6 @@
   </component>
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/eigen" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/embed-resource" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/fmt" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/googletest" vcs="Git" />
