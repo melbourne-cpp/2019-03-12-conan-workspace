@@ -11,7 +11,6 @@ if (MSVC)
 endif ()
 
 add_subdirectory(fmt)
-add_subdirectory(glslang)
 add_subdirectory(openmesh)
 add_subdirectory(embed-resource)
 
@@ -32,8 +31,6 @@ add_subdirectory(tbb)
 if (MSVC)
   set(CMAKE_DEBUG_POSTFIX ${CMAKE_OLD_DEBUG_POSTFIX})
 endif ()
-
-add_subdirectory(freetype2)
 
 if (MSVC)
   set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)

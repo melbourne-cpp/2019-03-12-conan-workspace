@@ -1,6 +1,3 @@
-[submodule "freetype2"]
-	path = freetype2
-	url = ../../lawrencem99/freetype2.git
 [submodule "tbb"]
 	path = tbb
 	url = ../../lawrencem99/tbb.git
@@ -19,9 +16,6 @@
 [submodule "lmengine"]
 	path = lmengine
 	url = ../../lawrencem99/lmengine.git
-[submodule "glslang"]
-	path = glslang
-	url = ../../lawrencem99/glslang.git
 [submodule "openmesh"]
 	path = openmesh
 	url = ../../lawrencem99/openmesh.git
