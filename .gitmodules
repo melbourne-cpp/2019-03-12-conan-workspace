@@ -13,9 +13,6 @@
 [submodule "lmengine"]
 	path = lmengine
 	url = ../../lawrencem99/lmengine.git
-[submodule "openmesh"]
-	path = openmesh
-	url = ../../lawrencem99/openmesh.git
 [submodule "embed-resource"]
 	path = embed-resource
 	url = ../../lawrencem99/embed-resource.git

@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.6)
 project(Workspace)
+include(ExternalProject)
+
 set(CMAKE_DEBUG_POSTFIX "")
 set(CMAKE_RELWITHDEBINFO_POSTFIX "")
 set(CMAKE_MINSIZEREL_POSTFIX "")
@@ -11,12 +13,9 @@ if (MSVC)
 endif ()
 
 add_subdirectory(fmt)
-add_subdirectory(openmesh)
 add_subdirectory(embed-resource)
 
 include_directories(embed-resource)
-
-set(OPENMESH_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/openmesh/src)
 
 if (MSVC)
   set(CMAKE_OLD_DEBUG_POSTFIX ${CMAKE_DEBUG_POSTFIX})
@@ -27,6 +26,9 @@ set(TBB_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(TBB_BUILD_STATIC OFF CACHE BOOL "" FORCE)
 
 add_subdirectory(tbb)
+set(TBB_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/tbb)
+set(TBB_INCLUDE_DIR ${TBB_ROOT}/include)
+set(TBB_BUILD_DIR ${TBB_DIR}/build)
 
 if (MSVC)
   set(CMAKE_DEBUG_POSTFIX ${CMAKE_OLD_DEBUG_POSTFIX})
@@ -49,7 +51,7 @@ endif()
 INCLUDE_DIRECTORIES(${GTK3_INCLUDE_DIRS})
 LINK_DIRECTORIES(${GTK3_LIBRARY_DIRS})
 
-include(ExternalProject)
+# Eigen
 ExternalProject_Add(
   eigen
   PREFIX eigen
@@ -62,12 +64,15 @@ ExternalProject_Add(
 ExternalProject_Get_Property(eigen SOURCE_DIR)
 set(EIGEN_SOURCE_DIR ${SOURCE_DIR})
 
-set(FREETYPE_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/freetype2/include)
-
-set(TBB_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/tbb)
-
-set(TBB_INCLUDE_DIR ${TBB_ROOT}/include)
-set(TBB_BUILD_DIR ${TBB_DIR}/build)
+# OpenMesh
+include(DownloadProject.cmake)
+download_project(
+  PROJ openmesh
+  PREFIX openmesh
+  URL "https://github.com/lawrencem99/openmesh/archive/lm-minimal.tar.gz"
+  UPDATE_DISCONNECTED 1
+)
+add_subdirectory(${openmesh_SOURCE_DIR} ${openmesh_BINARY_DIR})
 
 macro(exe_properties name)
   if (WIN32)
