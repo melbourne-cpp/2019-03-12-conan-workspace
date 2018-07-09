@@ -7,12 +7,8 @@
   </component>
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/embed-resource" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/fmt" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/googletest" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lmeditor" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lmengine" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lmlib" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/tbb" vcs="Git" />
   </component>
 </project>

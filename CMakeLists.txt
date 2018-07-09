@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.6)
 project(Workspace)
 include(ExternalProject)
+include(DownloadProject.cmake)
 
 set(CMAKE_DEBUG_POSTFIX "")
 set(CMAKE_RELWITHDEBINFO_POSTFIX "")
@@ -12,11 +13,26 @@ if (MSVC)
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /MP")
 endif ()
 
-add_subdirectory(fmt)
-add_subdirectory(embed-resource)
+# fmt
+download_project(
+  PROJ fmt
+  PREFIX fmt
+  URL "https://github.com/fmtlib/fmt/archive/5.1.0.tar.gz"
+  URL_MD5 89863cfec1448aec409a2eecf62600a2
+  UPDATE_DISCONNECTED 1
+)
+add_subdirectory(${fmt_SOURCE_DIR} ${fmt_BINARY_DIR})
+# (fmt)
 
-include_directories(embed-resource)
+download_project(
+  PROJ embed-resource
+  PREFIX embed-resource
+  GIT_REPOSITORY "https://github.com/lawrencem99/embed-resource.git"
+  UPDATE_DISCONNECTED 1
+)
+add_subdirectory(${embed-resource_SOURCE_DIR} ${embed-resource_BINARY_DIR})
 
+# tbb
 if (MSVC)
   set(CMAKE_OLD_DEBUG_POSTFIX ${CMAKE_DEBUG_POSTFIX})
   set(CMAKE_DEBUG_POSTFIX _debug)
@@ -25,20 +41,35 @@ endif ()
 set(TBB_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(TBB_BUILD_STATIC OFF CACHE BOOL "" FORCE)
 
-add_subdirectory(tbb)
-set(TBB_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/tbb)
-set(TBB_INCLUDE_DIR ${TBB_ROOT}/include)
-set(TBB_BUILD_DIR ${TBB_DIR}/build)
+download_project(
+  PROJ tbb
+  PREFIX tbb
+  URL "https://github.com/lawrencem99/tbb/archive/lm-minimal.tar.gz"
+  URL_MD5 9fb1401b3815b59e5d27927a9d0ee65d
+  UPDATE_DISCONNECTED 1
+)
+add_subdirectory(${tbb_SOURCE_DIR} ${tbb_BINARY_DIR})
+set(TBB_INCLUDE_DIR ${tbb_SOURCE_DIR}/include)
 
 if (MSVC)
   set(CMAKE_DEBUG_POSTFIX ${CMAKE_OLD_DEBUG_POSTFIX})
 endif ()
+# (tbb)
 
+# GoogleTest
 if (MSVC)
   set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 endif ()
 
-add_subdirectory(googletest)
+download_project(
+  PROJ googletest
+  PREFIX googletest
+  GIT_REPOSITORY "https://github.com/google/googletest.git"
+  GIT_TAG ba96d0b
+  UPDATE_DISCONNECTED 1
+)
+add_subdirectory(${googletest_SOURCE_DIR} ${googletest_BINARY_DIR})
+# (GoogleTest)
 
 find_package(Vulkan REQUIRED)
 
@@ -60,19 +91,22 @@ ExternalProject_Add(
   CONFIGURE_COMMAND ""
   BUILD_COMMAND ""
   INSTALL_COMMAND ""
+  UPDATE_DISCONNECTED 1
 )
 ExternalProject_Get_Property(eigen SOURCE_DIR)
 set(EIGEN_SOURCE_DIR ${SOURCE_DIR})
+# (eigen)
 
 # OpenMesh
-include(DownloadProject.cmake)
 download_project(
   PROJ openmesh
   PREFIX openmesh
   URL "https://github.com/lawrencem99/openmesh/archive/lm-minimal.tar.gz"
+  URL_MD5 6907271e86f0ff809c8d64e2e1abea4a
   UPDATE_DISCONNECTED 1
 )
 add_subdirectory(${openmesh_SOURCE_DIR} ${openmesh_BINARY_DIR})
+# (OpenMesh)
 
 macro(exe_properties name)
   if (WIN32)
