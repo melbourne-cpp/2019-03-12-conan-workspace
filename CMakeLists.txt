@@ -83,18 +83,13 @@ INCLUDE_DIRECTORIES(${GTK3_INCLUDE_DIRS})
 LINK_DIRECTORIES(${GTK3_LIBRARY_DIRS})
 
 # Eigen
-ExternalProject_Add(
-  eigen
+download_project(
+  PROJ EIGEN
   PREFIX eigen
   URL https://github.com/eigenteam/eigen-git-mirror/archive/3.3.4.tar.gz
-  URL_MD5 1896a1f682e6cdcffd91b6e5ba8286a2
-  CONFIGURE_COMMAND ""
-  BUILD_COMMAND ""
-  INSTALL_COMMAND ""
+  URL_MD5 "1896a1f682e6cdcffd91b6e5ba8286a2"
   UPDATE_DISCONNECTED 1
 )
-ExternalProject_Get_Property(eigen SOURCE_DIR)
-set(EIGEN_SOURCE_DIR ${SOURCE_DIR})
 # (eigen)
 
 # OpenMesh
@@ -145,6 +140,7 @@ if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
 elseif (MSVC)
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /std:c++17")
   add_definitions(-D_USE_MATH_DEFINES)
+  add_compile_options(/wd4250)
 elseif(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
 endif ()
@@ -155,7 +151,6 @@ if (WIN32)
 elseif(UNIX)
 
 endif ()
-
 add_subdirectory(lmlib)
 add_subdirectory(lmengine)
 add_subdirectory(lmeditor)
