@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.6)
 project(Workspace)
 include(ExternalProject)
-include(DownloadProject.cmake)
+include(cmake/DownloadProject.cmake)
 
 set(CMAKE_DEBUG_POSTFIX "")
 set(CMAKE_RELWITHDEBINFO_POSTFIX "")
