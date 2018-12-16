@@ -1,5 +1,8 @@
 cmake_minimum_required(VERSION 3.6)
+
 project(Workspace)
+
+set(CMAKE_MODULE_PATH ${CMAKE_BINARY_DIR} ${CMAKE_MODULE_PATH})
 
 set(CMAKE_DEBUG_POSTFIX "")
 set(CMAKE_RELWITHDEBINFO_POSTFIX "")
