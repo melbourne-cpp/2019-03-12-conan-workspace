@@ -1,11 +1,9 @@
 lmlib:
   folder: lmlib
   includedirs: include
-  cmakedir: ./
 lmeditor:
   folder: lmeditor
   includedirs: include
-  cmakedir: ./
 
 root: lmeditor
 generator: cmake

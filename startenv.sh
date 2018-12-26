@@ -10,6 +10,6 @@ if [[ ! -f ./.python-env/bin/conan ]]; then
     pip install conan
 fi
 
-export CONAN_USER_HOME="$(pwd)/.conan-user-home"
+export CONAN_USER_HOME="$(pwd)"
 
 conan config install ./conan-config
