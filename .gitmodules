@@ -1,9 +1,9 @@
 [submodule "lmeditor"]
 	path = lmeditor
-	url = ../../lawrencem99/lmeditor.git
+	url = ../../Lawrencemm/lmeditor.git
 [submodule "lmlib"]
 	path = lmlib
-	url = ../../lawrencem99/lmlib.git
+	url = ../../Lawrencemm/lmlib.git
 [submodule "lmengine"]
 	path = lmengine
-	url = ../../lawrencem99/lmengine.git
+	url = ../../Lawrencemm/lmengine.git
