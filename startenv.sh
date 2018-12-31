@@ -12,4 +12,4 @@ fi
 
 export CONAN_USER_HOME="$(pwd)"
 
-conan config install ./conan-config
+conan config install ./.conan-config
