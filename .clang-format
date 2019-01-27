@@ -2,3 +2,5 @@ BasedOnStyle: LLVM
 BreakBeforeBraces: Allman
 AlignAfterOpenBracket: AlwaysBreak
 BinPackArguments: false
+IndentWidth: 4
+ContinuationIndentWidth: 2
