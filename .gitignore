@@ -2,4 +2,3 @@ cmake-build*
 .idea/workspace.xml
 /.vs/
 Testing
-CMakeLists.txt

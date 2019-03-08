@@ -10,5 +10,11 @@
       <file path="$PROJECT_DIR$/lmlib/src" />
       <file path="$PROJECT_DIR$/lmlib/test/src" />
     </sourceRoots>
+    <excludeRoots>
+      <file path="$PROJECT_DIR$/lmeditor/cmake-build-Release" />
+      <file path="$PROJECT_DIR$/lmlib/cmake-build-Release" />
+      <file path="$PROJECT_DIR$/lmeditor/cmake-build-Debug" />
+      <file path="$PROJECT_DIR$/lmlib/cmake-build-Debug" />
+    </excludeRoots>
   </component>
 </project>

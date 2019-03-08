@@ -2,5 +2,9 @@ BasedOnStyle: LLVM
 BreakBeforeBraces: Allman
 AlignAfterOpenBracket: AlwaysBreak
 BinPackArguments: false
+BinPackParameters: false
 IndentWidth: 4
 ContinuationIndentWidth: 2
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+IndentWrappedFunctionNames: true
+AllowAllParametersOfDeclarationOnNextLine: false
