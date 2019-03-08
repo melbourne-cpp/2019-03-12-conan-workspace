@@ -1,10 +1,9 @@
-lmlib:
-  folder: lmlib
-  includedirs: include
-lmeditor:
-  folder: lmeditor
-  includedirs: include
+editables:
+  lmlib/0.0.1@lawrencem/HEAD:
+    path: lmlib
+  lmeditor/0.0.1@lawrencem/HEAD:
+    path: lmeditor
 
-root: lmeditor
-generator: cmake
-name: workspace
+root: lmeditor/0.0.1@lawrencem/HEAD
+workspace_generator: cmake
+layout: layout_cmake
